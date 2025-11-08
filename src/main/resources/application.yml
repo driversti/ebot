@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: ebot
+
+erepublik:
+  base-url: https://www.erepublik.com
+  keep-alive:
+    interval-minutes: 5
+  login:
+    email: ${EBOT_EMAIL:}
+    password: ${EBOT_PASSWORD:}
+  user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+
+logging:
+  level:
+    root: INFO
+    live.yurii.ebot: DEBUG
+    org.springframework: INFO
+
+server:
+  port: 8787
