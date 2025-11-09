@@ -21,6 +21,7 @@ import org.springframework.web.client.RestClient;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.ThreadLocalRandom;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -28,6 +29,8 @@ import java.util.Optional;
 public class CampaignService {
 
   private static final int FIRST = 1;
+  private static final long MIN_DELAY_MS = 500;
+  private static final long MAX_DELAY_MS = 1500;
 
   private final RestClient restClient;
   private final SessionContext sessionContext;
@@ -79,6 +82,11 @@ public class CampaignService {
 
         // Store contributions
         storeContributions(round, pageData.getContributions());
+
+        // Add delay between requests to avoid 429 rate limiting
+        if (page < consoleData.getMaxPages()) {
+          addRequestDelay();
+        }
       }
     }
 
@@ -150,6 +158,22 @@ public class CampaignService {
         .build();
 
       round.addContribution(contribution);
+    }
+
+    // Add delay between requests to avoid 429 rate limiting
+    if (!contributions.isEmpty()) {
+      addRequestDelay();
+    }
+  }
+
+  private void addRequestDelay() {
+    try {
+      long delay = ThreadLocalRandom.current().nextLong(MIN_DELAY_MS, MAX_DELAY_MS + 1);
+      log.debug("Adding delay of {} ms between requests", delay);
+      Thread.sleep(delay);
+    } catch (InterruptedException e) {
+      Thread.currentThread().interrupt();
+      log.warn("Request delay interrupted", e);
     }
   }
 
