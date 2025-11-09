@@ -1,0 +1,32 @@
+---
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: ebot-postgres
+    environment:
+      POSTGRES_DB: ${DB_NAME:-ebot}
+      POSTGRES_USER: ${DB_USERNAME:-ebot}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-ebot123}
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    networks:
+      - ebot-network
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: ebot-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL:-admin@ebot.local}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD:-admin123}
+    ports:
+      - "${PGADMIN_PORT:-5050}:80"
+    depends_on:
+      - postgres
+    networks:
+      - ebot-network
+
+networks:
+  ebot-network:
+    driver: bridge

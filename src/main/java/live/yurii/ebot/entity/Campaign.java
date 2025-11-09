@@ -1,0 +1,80 @@
+package live.yurii.ebot.entity;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OrderBy;
+import jakarta.persistence.Table;
+import live.yurii.ebot.model.Country;
+import live.yurii.ebot.model.WarType;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
+import java.time.Instant;
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
+@Table(name = "campaigns")
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class Campaign {
+
+  @Id
+  @Column(name = "id", unique = true, nullable = false)
+  private Integer id;
+
+  @Column(name = "war_id", nullable = false)
+  private Integer warId;
+
+  @Column(name = "started_at", nullable = false)
+  private Instant startedAt;
+
+  @Column(name = "finished_at")
+  private Instant finishedAt;
+
+  @Enumerated(EnumType.STRING)
+  @Column(name = "invader_country", nullable = false)
+  private Country invader;
+
+  @Enumerated(EnumType.STRING)
+  @Column(name = "defender_country", nullable = false)
+  private Country defender;
+
+  @ManyToOne(fetch = FetchType.LAZY)
+  @JoinColumn(name = "region_id", nullable = false)
+  private Region region;
+
+  @ManyToOne(fetch = FetchType.LAZY)
+  @JoinColumn(name = "city_id", nullable = false)
+  private City city;
+
+  @Enumerated(EnumType.STRING)
+  @Column(name = "war_type", nullable = false)
+  private WarType warType;
+
+  @OneToMany(mappedBy = "campaign", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+  @OrderBy("id ASC")
+  private List<Round> rounds = new ArrayList<>();
+
+  @CreationTimestamp
+  @Column(name = "created_at", nullable = false, updatable = false)
+  private Instant createdAt;
+
+  @UpdateTimestamp
+  @Column(name = "updated_at", nullable = false)
+  private Instant updatedAt;
+}
