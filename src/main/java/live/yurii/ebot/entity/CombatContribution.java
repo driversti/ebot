@@ -20,6 +20,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.Instant;
+import java.util.Objects;
 
 @Entity
 @Table(name = "combat_contributions")
@@ -57,4 +58,22 @@ public class CombatContribution {
   @Column(name = "updated_at", nullable = false)
   private Instant updatedAt;
 
+  @Override
+  public int hashCode() {
+    int result = Objects.hashCode(id);
+    result = 31 * result + Objects.hashCode(citizen);
+    result = 31 * result + Objects.hashCode(forCountry);
+    result = 31 * result + Objects.hashCode(round);
+    return result;
+  }
+
+  @Override
+  public final boolean equals(Object o) {
+    if (!(o instanceof CombatContribution that)) return false;
+
+    return Objects.equals(id, that.id)
+      && Objects.equals(citizen, that.citizen)
+      && forCountry == that.forCountry
+      && Objects.equals(round, that.round);
+  }
 }

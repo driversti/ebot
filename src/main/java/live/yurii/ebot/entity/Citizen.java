@@ -17,6 +17,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Table(name = "citizens")
@@ -46,4 +47,19 @@ public class Citizen {
   @UpdateTimestamp
   @Column(name = "updated_at", nullable = false)
   private Instant updatedAt;
+
+  @Override
+  public int hashCode() {
+    int result = Objects.hashCode(id);
+    result = 31 * result + Objects.hashCode(name);
+    return result;
+  }
+
+  @Override
+  public final boolean equals(Object o) {
+    if (!(o instanceof Citizen citizen)) return false;
+
+    return Objects.equals(id, citizen.id)
+      && Objects.equals(name, citizen.name);
+  }
 }

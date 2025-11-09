@@ -21,7 +21,9 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.Instant;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "rounds", uniqueConstraints = {
@@ -61,7 +63,7 @@ public class Round {
   private Integer defenderScore = 0;
 
   @OneToMany(mappedBy = "round", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-  private List<CombatContribution> contributions = new ArrayList<>();
+  private Set<CombatContribution> contributions = new HashSet<>();
 
   @CreationTimestamp
   @Column(name = "created_at", nullable = false, updatable = false)
@@ -71,15 +73,11 @@ public class Round {
   @Column(name = "updated_at", nullable = false)
   private Instant updatedAt;
 
-  public boolean isFinished() {
-    return finishedAt != null;
-  }
-
-  public boolean isInvaderWinning() {
-    return invaderScore > defenderScore;
-  }
-
-  public boolean isDefenderWinning() {
-    return defenderScore > invaderScore;
+  public void addContribution(CombatContribution contribution) {
+    if (contributions == null) {
+      contributions = new HashSet<>();
+    }
+    contributions.add(contribution);
+    contribution.setRound(this);
   }
 }

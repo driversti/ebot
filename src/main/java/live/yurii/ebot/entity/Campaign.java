@@ -24,6 +24,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Entity
 @Table(name = "campaigns")
@@ -69,6 +70,17 @@ public class Campaign {
   @OneToMany(mappedBy = "campaign", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
   @OrderBy("id ASC")
   private List<Round> rounds = new ArrayList<>();
+
+  public Optional<Round> findRoundById(Integer roundId) {
+    return rounds.stream()
+      .filter(round -> round.getId().equals(roundId))
+      .findFirst();
+  }
+
+  public void addRound(Round round) {
+    rounds.add(round);
+    round.setCampaign(this);
+  }
 
   @CreationTimestamp
   @Column(name = "created_at", nullable = false, updatable = false)

@@ -1,0 +1,597 @@
+{
+  "40": {
+    "fighterData": {
+      "1": {
+        "citizenId": 5452141,
+        "citizenName": "VETERATOR",
+        "country_name": "Germany",
+        "citizenAvatar": "https://cdnt.erepublik.net/GnQU3rOmX__YvUxBTLm40RsPri4=/30x30/smart/avatars/Citizens/2011/12/17/9efe0ffe1f9400c69fce3c3417074383.jpg?7dea2fc51796ce6e93fb43159e7dc2b7",
+        "country_permalink": "Germany",
+        "for_country_id": 40,
+        "value": "67,275",
+        "raw_value": 67275,
+        "reward": false
+      },
+      "2": {
+        "citizenId": 8367190,
+        "citizenName": "RomanZ88",
+        "country_name": "Ukraine",
+        "citizenAvatar": "https://cdnt.erepublik.net/78bFWykDpxOm1qrmZ3LktNuRhnA=/30x30/smart/avatars/Citizens/2014/03/26/621637cea05110a50866e45cb6bafa29.jpg?e93d8aefa8a55e59b96d36f500424282",
+        "country_permalink": "Ukraine",
+        "for_country_id": 40,
+        "value": "12,109",
+        "raw_value": 12109,
+        "reward": false
+      }
+    },
+    "pages": 0
+  },
+  "54": {
+    "fighterData": {
+      "1": {
+        "citizenId": 5452141,
+        "citizenName": "VETERATOR",
+        "country_name": "Germany",
+        "citizenAvatar": "https://cdnt.erepublik.net/GnQU3rOmX__YvUxBTLm40RsPri4=/30x30/smart/avatars/Citizens/2011/12/17/9efe0ffe1f9400c69fce3c3417074383.jpg?7dea2fc51796ce6e93fb43159e7dc2b7",
+        "country_permalink": "Germany",
+        "for_country_id": 54,
+        "value": "40,680",
+        "raw_value": 40680,
+        "reward": false
+      }
+    },
+    "pages": 0
+  },
+  "rounds": {
+    "33348511": {
+      "id": 33348511,
+      "zone": 1,
+      "round": 1,
+      "division": 1,
+      "created_at": 1747100242,
+      "type": "tanks",
+      "terrain_type_id": 2,
+      "started": 1,
+      "finished": 1
+    },
+    "33348512": {
+      "id": 33348512,
+      "zone": 1,
+      "round": 1,
+      "division": 2,
+      "created_at": 1747100242,
+      "type": "tanks",
+      "terrain_type_id": 2,
+      "started": 1,
+      "finished": 1
+    },
+    "33348513": {
+      "id": 33348513,
+      "zone": 1,
+      "round": 1,
+      "division": 3,
+      "created_at": 1747100242,
+      "type": "tanks",
+      "terrain_type_id": 2,
+      "started": 1,
+      "finished": 1
+    },
+    "33348514": {
+      "id": 33348514,
+      "zone": 1,
+      "round": 1,
+      "division": 4,
+      "created_at": 1747100242,
+      "type": "tanks",
+      "terrain_type_id": 2,
+      "started": 1,
+      "finished": 1
+    },
+    "33348515": {
+      "id": 33348515,
+      "zone": 1,
+      "round": 1,
+      "division": 11,
+      "created_at": 1747100242,
+      "type": "aircraft",
+      "terrain_type_id": 0,
+      "started": 1,
+      "finished": 1
+    },
+    "33349416": {
+      "id": 33349416,
+      "zone": 2,
+      "round": 2,
+      "division": 1,
+      "created_at": 1747106047,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33349417": {
+      "id": 33349417,
+      "zone": 2,
+      "round": 2,
+      "division": 2,
+      "created_at": 1747106047,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33349418": {
+      "id": 33349418,
+      "zone": 2,
+      "round": 2,
+      "division": 3,
+      "created_at": 1747106047,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33349419": {
+      "id": 33349419,
+      "zone": 2,
+      "round": 2,
+      "division": 4,
+      "created_at": 1747106047,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33349420": {
+      "id": 33349420,
+      "zone": 2,
+      "round": 2,
+      "division": 11,
+      "created_at": 1747106047,
+      "type": "aircraft",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33350426": {
+      "id": 33350426,
+      "zone": 3,
+      "round": 3,
+      "division": 1,
+      "created_at": 1747112165,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33350427": {
+      "id": 33350427,
+      "zone": 3,
+      "round": 3,
+      "division": 2,
+      "created_at": 1747112165,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33350428": {
+      "id": 33350428,
+      "zone": 3,
+      "round": 3,
+      "division": 3,
+      "created_at": 1747112165,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33350429": {
+      "id": 33350429,
+      "zone": 3,
+      "round": 3,
+      "division": 4,
+      "created_at": 1747112165,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33350430": {
+      "id": 33350430,
+      "zone": 3,
+      "round": 3,
+      "division": 11,
+      "created_at": 1747112165,
+      "type": "aircraft",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33351601": {
+      "id": 33351601,
+      "zone": 4,
+      "round": 4,
+      "division": 1,
+      "created_at": 1747118826,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33351602": {
+      "id": 33351602,
+      "zone": 4,
+      "round": 4,
+      "division": 2,
+      "created_at": 1747118826,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33351603": {
+      "id": 33351603,
+      "zone": 4,
+      "round": 4,
+      "division": 3,
+      "created_at": 1747118826,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33351604": {
+      "id": 33351604,
+      "zone": 4,
+      "round": 4,
+      "division": 4,
+      "created_at": 1747118826,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33351605": {
+      "id": 33351605,
+      "zone": 4,
+      "round": 4,
+      "division": 11,
+      "created_at": 1747118826,
+      "type": "aircraft",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33352851": {
+      "id": 33352851,
+      "zone": 5,
+      "round": 5,
+      "division": 1,
+      "created_at": 1747124764,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33352852": {
+      "id": 33352852,
+      "zone": 5,
+      "round": 5,
+      "division": 2,
+      "created_at": 1747124764,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33352853": {
+      "id": 33352853,
+      "zone": 5,
+      "round": 5,
+      "division": 3,
+      "created_at": 1747124764,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33352854": {
+      "id": 33352854,
+      "zone": 5,
+      "round": 5,
+      "division": 4,
+      "created_at": 1747124764,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33352855": {
+      "id": 33352855,
+      "zone": 5,
+      "round": 5,
+      "division": 11,
+      "created_at": 1747124764,
+      "type": "aircraft",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33354176": {
+      "id": 33354176,
+      "zone": 6,
+      "round": 6,
+      "division": 1,
+      "created_at": 1747130645,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33354177": {
+      "id": 33354177,
+      "zone": 6,
+      "round": 6,
+      "division": 2,
+      "created_at": 1747130645,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33354178": {
+      "id": 33354178,
+      "zone": 6,
+      "round": 6,
+      "division": 3,
+      "created_at": 1747130645,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33354179": {
+      "id": 33354179,
+      "zone": 6,
+      "round": 6,
+      "division": 4,
+      "created_at": 1747130645,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33354180": {
+      "id": 33354180,
+      "zone": 6,
+      "round": 6,
+      "division": 11,
+      "created_at": 1747130645,
+      "type": "aircraft",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33355496": {
+      "id": 33355496,
+      "zone": 7,
+      "round": 7,
+      "division": 1,
+      "created_at": 1747136528,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33355497": {
+      "id": 33355497,
+      "zone": 7,
+      "round": 7,
+      "division": 2,
+      "created_at": 1747136528,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33355498": {
+      "id": 33355498,
+      "zone": 7,
+      "round": 7,
+      "division": 3,
+      "created_at": 1747136528,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33355499": {
+      "id": 33355499,
+      "zone": 7,
+      "round": 7,
+      "division": 4,
+      "created_at": 1747136528,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33355500": {
+      "id": 33355500,
+      "zone": 7,
+      "round": 7,
+      "division": 11,
+      "created_at": 1747136528,
+      "type": "aircraft",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33356881": {
+      "id": 33356881,
+      "zone": 8,
+      "round": 8,
+      "division": 1,
+      "created_at": 1747142348,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33356882": {
+      "id": 33356882,
+      "zone": 8,
+      "round": 8,
+      "division": 2,
+      "created_at": 1747142348,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33356883": {
+      "id": 33356883,
+      "zone": 8,
+      "round": 8,
+      "division": 3,
+      "created_at": 1747142348,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33356884": {
+      "id": 33356884,
+      "zone": 8,
+      "round": 8,
+      "division": 4,
+      "created_at": 1747142348,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33356885": {
+      "id": 33356885,
+      "zone": 8,
+      "round": 8,
+      "division": 11,
+      "created_at": 1747142348,
+      "type": "aircraft",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33358421": {
+      "id": 33358421,
+      "zone": 9,
+      "round": 9,
+      "division": 1,
+      "created_at": 1747148829,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33358422": {
+      "id": 33358422,
+      "zone": 9,
+      "round": 9,
+      "division": 2,
+      "created_at": 1747148829,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33358423": {
+      "id": 33358423,
+      "zone": 9,
+      "round": 9,
+      "division": 3,
+      "created_at": 1747148829,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33358424": {
+      "id": 33358424,
+      "zone": 9,
+      "round": 9,
+      "division": 4,
+      "created_at": 1747148829,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33358425": {
+      "id": 33358425,
+      "zone": 9,
+      "round": 9,
+      "division": 11,
+      "created_at": 1747148829,
+      "type": "aircraft",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33359776": {
+      "id": 33359776,
+      "zone": 10,
+      "round": 10,
+      "division": 1,
+      "created_at": 1747154766,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33359777": {
+      "id": 33359777,
+      "zone": 10,
+      "round": 10,
+      "division": 2,
+      "created_at": 1747154766,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33359778": {
+      "id": 33359778,
+      "zone": 10,
+      "round": 10,
+      "division": 3,
+      "created_at": 1747154766,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33359779": {
+      "id": 33359779,
+      "zone": 10,
+      "round": 10,
+      "division": 4,
+      "created_at": 1747154766,
+      "type": "tanks",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    },
+    "33359780": {
+      "id": 33359780,
+      "zone": 10,
+      "round": 10,
+      "division": 11,
+      "created_at": 1747154766,
+      "type": "aircraft",
+      "terrain_type_id": null,
+      "started": 1,
+      "finished": 1
+    }
+  }
+}

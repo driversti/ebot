@@ -57,7 +57,7 @@ public class SessionKeepAliveService {
         })
         .body(String.class);
 
-      log.debug("Keep-alive successful");
+      log.debug("Keep-alive successful: {}", response);
 
     } catch (Exception e) {
       log.error("Keep-alive failed: {}", e.getMessage());
