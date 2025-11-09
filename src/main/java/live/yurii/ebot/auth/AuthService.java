@@ -28,7 +28,7 @@ public class AuthService {
 
   private final AtomicBoolean authInProgress = new AtomicBoolean(false);
 
-  @Retryable(value = {Exception.class}, maxAttempts = 3, backoff = @Backoff(delay = 5000))
+  @Retryable(retryFor = {Exception.class}, maxAttempts = 3, backoff = @Backoff(delay = 5000))
   public void authenticate() {
     // Avoid unnecessary re-login if we are already authenticated
     if (sessionContext.isAuthenticated()) {
