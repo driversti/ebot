@@ -8,6 +8,8 @@ import java.time.Instant;
 public record BattleDTO(
   int id,
   int warId,
+  RegionDTO region,
+  CityDTO city,
   Instant start,
   WarType warType,
   Country invader,

@@ -110,6 +110,7 @@ src/main/java/live/yurii/ebot/
 
 ## Development rules
 
+- Follow the Domain-Driven Design.
 - **Keep it simple**: Keep the code simple and readable
 - **Keep it DRY**: Don't repeat yourself
 - **Keep it modular**: Break down complex logic into smaller, reusable components

@@ -41,7 +41,7 @@ public class Campaign {
   @Column(name = "war_id", nullable = false)
   private Integer warId;
 
-  @Column(name = "started_at", nullable = false)
+  @Column(name = "started_at")
   private Instant startedAt;
 
   @Column(name = "finished_at")

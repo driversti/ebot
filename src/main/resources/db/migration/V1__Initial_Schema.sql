@@ -29,7 +29,7 @@ CREATE TABLE citizens (
 CREATE TABLE campaigns (
     id INTEGER PRIMARY KEY,
     war_id INTEGER NOT NULL,
-    started_at TIMESTAMP NOT NULL,
+    started_at TIMESTAMP,
     finished_at TIMESTAMP,
     invader_country VARCHAR(100) NOT NULL,
     defender_country VARCHAR(100) NOT NULL,

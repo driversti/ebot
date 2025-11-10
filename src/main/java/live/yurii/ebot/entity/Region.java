@@ -33,6 +33,4 @@ public class Region {
   @OneToMany(mappedBy = "region", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
   private List<City> cities = new ArrayList<>();
 
-  @OneToMany(mappedBy = "region", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-  private List<Campaign> campaigns = new ArrayList<>();
 }
