@@ -16,8 +16,10 @@ import live.yurii.ebot.model.Country;
 import live.yurii.ebot.model.WarType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -28,7 +30,9 @@ import java.util.Optional;
 
 @Entity
 @Table(name = "campaigns")
-@Data
+@Getter
+@Setter
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -36,6 +40,7 @@ public class Campaign {
 
   @Id
   @Column(name = "id", unique = true, nullable = false)
+  @EqualsAndHashCode.Include
   private Integer id;
 
   @Column(name = "war_id", nullable = false)

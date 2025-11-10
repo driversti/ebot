@@ -14,8 +14,10 @@ import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -29,7 +31,9 @@ import java.util.Set;
 @Table(name = "rounds", uniqueConstraints = {
   @UniqueConstraint(columnNames = {"campaign_id", "round", "division"})
 })
-@Data
+@Getter
+@Setter
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -37,13 +41,16 @@ public class Round {
 
   @Id
   @Column(name = "id", unique = true, nullable = false)
+  @EqualsAndHashCode.Include
   private Integer id;
 
   @Column(name = "round", nullable = false)
+  @EqualsAndHashCode.Include
   private Short round;
 
   @Enumerated(EnumType.STRING)
   @Column(name = "division", nullable = false, length = 10)
+  @EqualsAndHashCode.Include
   private Division division;
 
   @Column(name = "started_at", nullable = false)

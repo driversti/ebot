@@ -14,7 +14,7 @@ public class BattleConsoleDTODeserializer extends AbstractDeserializer<BattleCon
   @Override
   protected BattleConsoleDTO deserialize(JsonNode node) {
     List<BattleConsoleDTO.CombatContributionDTO> contributions = new ArrayList<>();
-    AtomicInteger maxPages = new AtomicInteger(0);
+    AtomicInteger maxPages = new AtomicInteger(1);
     List<BattleConsoleDTO.RoundInfoDTO> rounds = new ArrayList<>();
 
     // Process country sides (fighter data)

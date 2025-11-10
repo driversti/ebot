@@ -27,11 +27,10 @@ public class CampaignSyncService {
 
   private final RestClient restClient;
   private final CampaignRepository campaignRepository;
-  private final CampaignQueueService campaignQueueService;
   private final RegionRepository regionRepository;
   private final CityRepository cityRepository;
 
-  @Scheduled(fixedDelay = 300000) // 5 minutes in milliseconds
+  @Scheduled(initialDelay = 10000, fixedDelay = 300000) // 5 minutes in milliseconds
   @Transactional
   public void syncCampaigns() {
     log.info("Starting optimized campaign sync...");

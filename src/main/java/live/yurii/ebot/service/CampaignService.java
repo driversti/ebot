@@ -19,6 +19,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestClient;
 
 import java.time.Instant;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
@@ -57,12 +58,15 @@ public class CampaignService {
       log.info("Fetching battle console data with round {} to get complete round list", firstRoundId);
 
       BattleConsoleDTO consoleData = fetchBattleConsoleData(campaignId, FIRST, FIRST, FIRST, firstRoundId, FIRST, FIRST);
-      log.info("Found {} contributions and {} rounds in battle console",
-        consoleData.getContributions().size(), consoleData.getRounds().size());
+      log.info("Found total {} rounds in battle console", consoleData.getRounds().size());
 
       // Step 3: Iterate over all rounds and pull contributions with pagination
       int totalContributions = 0;
-      for (BattleConsoleDTO.RoundInfoDTO roundInfo : consoleData.getRounds()) {
+      for (BattleConsoleDTO.RoundInfoDTO roundInfo : consoleData.getRounds()
+        .stream()
+        .sorted(Comparator.comparing(BattleConsoleDTO.RoundInfoDTO::getId))
+        .toList()
+      ) {
         log.info("Processing round {} (division {}, order {})",
           roundInfo.getId(), roundInfo.getDivision(), roundInfo.getRound());
 
@@ -114,6 +118,7 @@ public class CampaignService {
       "battleId=%d&zoneId=%d&action=battleStatistics&round=%d&division=%d&battleZoneId=%d&type=damage&leftPage=%d&rightPage=%d&_token=%s",
       battleId, zoneId, roundOrder, division, battleZoneId, leftPage, rightPage, csrfToken
     );
+    log.info(body);
 
     return restClient.post()
       .uri("/en/military/battle-console")

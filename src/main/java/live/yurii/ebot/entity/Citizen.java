@@ -34,7 +34,7 @@ public class Citizen {
   @Column(name = "name", nullable = false)
   private String name;
 
-  @Column(name = "registered", nullable = false)
+  @Column(name = "registered")
   private Instant registered;
 
   @OneToMany(mappedBy = "citizen", cascade = CascadeType.ALL, fetch = FetchType.LAZY)

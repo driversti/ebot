@@ -4,5 +4,5 @@ GET https://examples.http-client.intellij.net/get
 
 ###
 
-POST http://localhost:8787/api/campaigns/777777/collect
+POST http://localhost:8787/api/campaigns/839139/collect
 Accept: application/json
